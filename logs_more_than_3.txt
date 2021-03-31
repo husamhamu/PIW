@@ -1,5 +1,5 @@
 SELECT COUNT(*)  AS users_logged_more3
 FROM (SELECT COUNT(logs.userId) AS logs_num
 	FROM i_user_login_logs AS logs
-	GROUB BY logs.userId) /* with this query we get the number of logs per user*/
+	GROUP BY logs.userId) /* with this query we get the number of logs per user*/
 WHERE logs_num >=3 /* then we fiter the query where the logs are greater or equal to 3*/
